@@ -63,7 +63,7 @@ class PCs extends Products {
 // --> LAPTOPS
 const AsusROGZephyrusG14 = new Laptop(
   "Asus ROG Zephyrus G14",
-  "../images/Asus ROG Zephyrus G14.webp",
+  "./images/Asus ROG Zephyrus G14.webp",
   "$ 11.285.204 COP",
   "Laptop gamer ultra potente con Ryzen 9",
   10,
@@ -72,7 +72,7 @@ const AsusROGZephyrusG14 = new Laptop(
 
 const MacBookPro14 = new Laptop(
   'MacBookPro 14"', //<- Name
-  "../images/MacBookPro14.webp", //<- rute of image
+  "./images/MacBookPro14.webp", //<- rute of image
   "$13,499,000 COP", //<- price
   "Diseño elegante y potente para profesionales", //<- description
   7, //<- stock
@@ -83,7 +83,7 @@ const MacBookPro14 = new Laptop(
 
 const AlienwareAuroraR13 = new PCs(
   "Alienware Aurora R13", //<- Name
-  "../images/AlienwareAuroraR13.webp", //<- rute of image
+  "./images/AlienwareAuroraR13.webp", //<- rute of image
   "$11,872,065 COP", //<- price
   "Potente PC para gaming y edición", //<- description
   "Intel i9-12900KF", //<- aditional
@@ -95,7 +95,7 @@ const AlienwareAuroraR13 = new PCs(
 
 const HPPavilionGaming = new PCs(
   "HP Pavilion Gaming", //<- Name
-  "../images/CorsairVengeancei7500.webp", //<- rute of image
+  "./images/CorsairVengeancei7500.webp", //<- rute of image
   "$13,502,948 COP", //<- price
   "Torre de alto rendimiento ideal para juegos AAA y productividad", //<- description
   "Intel Core i7-14700K", //<- aditional
@@ -108,7 +108,7 @@ const HPPavilionGaming = new PCs(
 // SMART PHONES
 const iPhone15Pro = new SmartPhone(
   "iPhone 15 Pro", //<- Name
-  "../images/iPhone15pro.webp", //<- rute of image
+  "./images/iPhone15pro.webp", //<- rute of image
   "$4,899,900 COP", //<- price
   "Potencia y cámara profesional en tu bolsillo", //<- description
   "A17 Bionic", //<- aditional
@@ -120,7 +120,7 @@ const iPhone15Pro = new SmartPhone(
 
 const SamsungGalaxyS24Ultra = new SmartPhone(
   "Samsung Galaxy S24 Ultra", //<- Name
-  "../images/samsungs24ultra.webp", //<- rute of image
+  "./images/samsungs24ultra.webp", //<- rute of image
   "$3,999,900 COP", //<- price
   "Pantalla AMOLED y cámara de 200MP", //<- description
   "Snapdragon 8 Gen 3", //<- aditional
