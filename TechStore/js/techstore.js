@@ -11,6 +11,7 @@ function addProducts() {
           <p class="description">
             ${product.description}
           </p>
+          <button class="btnBuy">Agregar al carrito</button>
     `;
     const article = document.querySelector(".product");
     sectionOfProducts.appendChild(articleProduct);
