@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+</head>
+
+<body>
+  <h1>ver en consola</h1>
+  <p> Ejercicio para Ti</p>
+  <p>1️⃣ Crea una clase Auto con las propiedades marca, modelo y año.</p>
+  <p>2️⃣ Agrega un método detalles() que imprima la información del auto.</p>
+  <p>3️⃣ Crea 2 objetos Auto y usa el método detalles().</p>
+
+
+  <script>
+    class Auto {
+      constructor(marca, modelo, año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+      }
+      detalles() {
+        return `Carro Marca: ${this.marca} Modelo: ${this.modelo} Del año: ${this.año}`
+      }
+    }
+
+    const supraMk4 = new Auto('Toyota', 'MK4', 1993);
+    const nissanGTR = new Auto('Nissan', 'GTR', 2007);
+
+    console.log(supraMk4.detalles());
+    console.log(nissanGTR.detalles());
+  </script>
+</body>
+
+</html>

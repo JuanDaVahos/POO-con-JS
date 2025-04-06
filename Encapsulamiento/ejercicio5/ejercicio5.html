@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5</title>
+</head>
+
+<body>
+  <p>2️⃣ Ejercicio: Tarjeta de Crédito 💳</p>
+  <p>📌 Requisitos:</p>
+
+  <p>Crea una clase TarjetaCredito con las propiedades privadas #titular, #numeroTarjeta y #saldoDisponible.</p>
+
+  <p>Implementa un getter para obtener el saldo disponible.</p>
+
+  <p>Implementa un setter para modificar el saldo (solo si la cantidad es mayor a 0).</p>
+
+  <p>Implementa un método realizarCompra(monto) que reste saldo si hay suficiente disponible.</p>
+  <p>Crea una instancia de TarjetaCredito, intenta modificar el saldo y realizar compras.</p>
+  </p>
+
+  <script>
+    class TarjetaCredito {
+      #titular;
+      #numeroTarjeta;
+      #saldoDisponible;
+      constructor(titular, numeroTarjeta, saldoDisponible) {
+        this.#titular = titular;
+        this.#numeroTarjeta = numeroTarjeta;
+        this.#saldoDisponible = saldoDisponible;
+      }
+      get saldoDisponible() {
+        return this.#saldoDisponible;
+      }
+
+      set ingresarSaldo(nuevoSaldo) {
+        if (nuevoSaldo > 0) {
+          this.#saldoDisponible += nuevoSaldo;
+          console.log(`Has ingresado saldo: ${nuevoSaldo}, tu saldo disponible es de: ${this.#saldoDisponible}`);
+        } else {
+          console.log(`No puedes ingresar valores negativos`);
+        }
+      }
+      realizarCompra(monto) {
+        if (monto > this.#saldoDisponible) {
+          console.log(`No tienes saldo suficiente, tu saldo actual es de ${this.#saldoDisponible}`);
+        } else {
+          this.#saldoDisponible = this.#saldoDisponible - monto;
+          console.log(`Has comprado un producto, de valor: ${monto}, tu saldo actula es de: ${this.#saldoDisponible}`);
+        }
+      }
+    }
+
+    const cuentaJuan = new TarjetaCredito('Juan', 1020, 1000);
+    console.log(cuentaJuan.saldoDisponible);
+    cuentaJuan.realizarCompra(200);
+    console.log(cuentaJuan.saldoDisponible);
+    cuentaJuan.ingresarSaldo = 1000;
+    console.log(cuentaJuan.saldoDisponible);
+  </script>
+</body>
+
+</html>

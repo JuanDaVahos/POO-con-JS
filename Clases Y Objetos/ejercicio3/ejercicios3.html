@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+</head>
+
+<body>
+  <h1>ver en consola</h1>
+  <p>Ejercicio 3: Persona</p>
+  <p>Crea una clase llamada Persona con las siguientes características:</p>
+
+  <p>Propiedades: nombre, edad, profesion</p>
+  <p>Método: presentarse() → Debe devolver un mensaje de presentación.</p>
+  <p>Crea una instancia de la clase y muestra su presentación.</p>
+
+  <script>
+    class Persona {
+      constructor(nombre, edad, profesion) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.profesion = profesion;
+      }
+      presentarse() {
+        return `Nombre: ${this.nombre} Edad: ${this.edad} Profesion: ${this.profesion}`
+      }
+    };
+
+    const presentacion = new Persona('Juan', 18, 'Programador');
+    console.log(presentacion.presentarse());
+  </script>
+</body>
+
+</html>

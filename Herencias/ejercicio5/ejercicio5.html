@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5</title>
+</head>
+
+<body>
+  <h1>Ver en consola</h1>
+  <p>5️⃣ Ejercicio: Vehículos 🚗</p>
+  <p>1️⃣ Crea una clase Vehiculo con marca y modelo.</p>
+  <p>2️⃣ Agrega un método mostrarInfo() que muestre la marca y modelo.</p>
+  <p>3️⃣ Crea una clase Coche que herede de Vehiculo y agregue velocidad máxima.</p>
+  <p>4️⃣ Crea una clase Moto que herede de Vehiculo y agregue tipo de manillar.</p>
+  <p>5️⃣ Crea instancias de Coche y Moto y prueba mostrarInfo().</p>
+
+  <script>
+    class Vehiculo {
+      constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+      }
+      mostrarInformacion() {
+        console.log(`Marca: ${this.marca} Modelo: ${this.modelo}`)
+      }
+    }
+
+    class Coche extends Vehiculo {
+      constructor(marca, modelo, velocidadMaxima) {
+        super(marca, modelo);
+        this.velocidadMaxima = velocidadMaxima;
+      }
+    }
+
+    class Moto extends Vehiculo {
+      constructor(marca, modelo, tipoManillar) {
+        super(marca, modelo)
+        this.tipoManillar = tipoManillar;
+      }
+    }
+
+    const coche1 = new Coche('Nissan', 'GTR', '250km/h');
+    const moto1 = new Moto('Boxer', '2017', 'Recto');
+
+    coche1.mostrarInformacion();
+    moto1.mostrarInformacion();
+  </script>
+</body>
+
+</html>

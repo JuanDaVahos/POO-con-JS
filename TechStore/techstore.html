@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/Products.js"></script>
+    <script src="./js/techstore.js" defer></script>
+    <title>TechStore</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        background: #e5e5e5;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 15px;
+      }
+      header h1 {
+        margin: 0;
+      }
+      header ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      ul li a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      main .products {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #b3b3b3;
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        max-width: 150px;
+      }
+      .product .name {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .product .price {
+        font-size: 1.1em;
+        color: #333;
+      }
+      .product .description {
+        font-size: 0.9em;
+        color: #555;
+      }
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        color: #000;
+      }
+      footer p {
+        text-shadow: 0 0 5px #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="techstore.html">TechStore</a></h1>
+      <ul>
+        <li><a href="techstore.html">Inicio</a></li>
+        <li><a href="#">Carrito</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="products">
+        <article class="product">
+          <h4 class="name">nombre del producto</h4>
+          <img src="./imagen" alt="image of product" />
+          <h3 class="price">valor</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+            modi.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Derechos reservados &copy; 2025</p>
+      <p>Desarrollado por [@VahosDev]</p>
+    </footer>
+  </body>
+</html>

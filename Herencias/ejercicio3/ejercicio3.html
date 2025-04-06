@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+</head>
+
+<body>
+  <h1>Ver en consola</h1>
+  <p>3️⃣ Ejercicio: Animales y Sonidos 🦁🐶</p>
+  <p>1️⃣ Crea una clase Animal con nombre y un método hacerSonido().</p>
+  <p>2️⃣ Crea una clase Perro que herede de Animal y sobrescriba hacerSonido() con "¡Guau guau!".</p>
+  <p>3️⃣ Crea una clase Gato que herede de Animal y sobrescriba hacerSonido() con "¡Miau miau!".</p>
+  <p>4️⃣ Crea instancias de Perro y Gato, llama a hacerSonido() y observa el resultado.</p>
+
+  <script>
+    class Animal {
+      constructor(nombre) {
+        this.nombre = nombre;
+      }
+
+      hacerSonido() {
+        console.log(`este animal hace un sonido`)
+      }
+    }
+
+    class Perro extends Animal {
+      hacerSonido() {
+        console.log(`${this.nombre} Dice: ¡Guau guau!`)
+      }
+    }
+
+    class Gato extends Animal {
+      hacerSonido() {
+        console.log(`${this.nombre} Dice: ¡Miau miau!`)
+      }
+    }
+
+    const perro1 = new Perro('Firulais');
+    const gato1 = new Gato('Misifu');
+
+    perro1.hacerSonido();
+    gato1.hacerSonido();
+  </script>
+</body>
+
+</html>
