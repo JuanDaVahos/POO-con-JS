@@ -130,11 +130,8 @@ const SamsungGalaxyS24Ultra = new SmartPhone(
   12 //<- stock
 );
 
-const AllProducts = [
-  AsusROGZephyrusG14,
-  MacBookPro14,
-  AlienwareAuroraR13,
-  HPPavilionGaming,
-  iPhone15Pro,
-  SamsungGalaxyS24Ultra,
-];
+const laptops = [AsusROGZephyrusG14, MacBookPro14];
+
+const pcs = [AlienwareAuroraR13, HPPavilionGaming];
+
+const mobiles = [iPhone15Pro, SamsungGalaxyS24Ultra];

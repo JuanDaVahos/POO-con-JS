@@ -49,6 +49,14 @@
           text-decoration: underline;
         }
       }
+      main {
+        text-align: center;
+      }
+      h2 {
+        margin-top: 10px;
+        color: #333;
+        text-decoration: underline #600000;
+      }
       main .products {
         display: flex;
         flex-direction: row;
@@ -113,17 +121,12 @@
       </ul>
     </header>
     <main>
-      <section class="products">
-        <dialog id="moreInfo" closedby="any">
-          <form action="dialog">
-            <button></button>
-          </form>
-        </dialog>
-
-        <div>
-          <button id="updateDetails">Update details</button>
-        </div>
-      </section>
+      <h2>Laptops</h2>
+      <section class="products laptops"></section>
+      <h2>Pc's</h2>
+      <section class="products pcs"></section>
+      <h2>mobiles</h2>
+      <section class="products mobiles"></section>
     </main>
     <footer>
       <p>Derechos reservados &copy; 2025</p>
