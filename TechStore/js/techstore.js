@@ -52,6 +52,9 @@ function addProducts() {
             ${product.description}
           </p>
           <p>Procesador: ${product.processor}</p>
+          <p>Memoria Ram: ${product.ram}</p>
+          <p>Almacenamiento: ${product.storage}</p>
+          <p>GPU: ${product.gpu}</p>
           <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
           <button>Cerrar</button>
@@ -83,6 +86,9 @@ function addProducts() {
             ${product.description}
           </p>
           <p>Procesador: ${product.processor}</p>
+          <p>Camara: ${product.camera}</p>
+          <p>Almacenamiento: ${product.storage}</p>
+          <p>Bateria: ${product.batery}</p>
           <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
           <button>Cerrar</button>

@@ -130,6 +130,7 @@ dialog form {
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 15px;
   gap: 20px;
 }
 

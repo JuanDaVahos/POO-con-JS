@@ -22,25 +22,6 @@ class Products {
 
 class Laptop extends Products {}
 
-class SmartPhone extends Products {
-  constructor(
-    name,
-    image,
-    price,
-    description,
-    processor,
-    camera,
-    storage,
-    batery,
-    stock
-  ) {
-    super(name, image, price, description, processor, stock);
-    this.camera = camera;
-    this.storage = storage;
-    this.batery = batery;
-  }
-}
-
 class PCs extends Products {
   constructor(
     name,
@@ -57,6 +38,25 @@ class PCs extends Products {
     this.ram = ram;
     this.storage = storage;
     this.gpu = gpu;
+  }
+}
+
+class SmartPhone extends Products {
+  constructor(
+    name,
+    image,
+    price,
+    description,
+    processor,
+    camera,
+    storage,
+    batery,
+    stock
+  ) {
+    super(name, image, price, description, processor, stock);
+    this.camera = camera;
+    this.storage = storage;
+    this.batery = batery;
   }
 }
 
