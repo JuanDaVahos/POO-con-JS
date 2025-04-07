@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 3</title>
-</head>
+  <body>
+    <p>3️⃣ Ejercicio: Sensor de Temperatura 🌡</p>
+    <p>Crea una clase Sensor con la propiedad privada #temperatura.</p>
+    <p>Implementa un método para leer la temperatura.</p>
+    <p>
+      Implementa un método para cambiar la temperatura (solo si está entre -50 y
+      100 grados).
+    </p>
+    <p>
+      Crea una instancia de Sensor, intenta cambiar la temperatura con valores
+      correctos e incorrectos y verifica el resultado.
+    </p>
 
-<body>
-  <p> 3️⃣ Ejercicio: Sensor de Temperatura 🌡</p>
-  <p>Crea una clase Sensor con la propiedad privada #temperatura.</p>
-  <p>Implementa un método para leer la temperatura.</p>
-  <p>Implementa un método para cambiar la temperatura (solo si está entre -50 y 100 grados).</p>
-  <p>Crea una instancia de Sensor, intenta cambiar la temperatura con valores correctos e incorrectos y verifica el
-    resultado.</p>
+    <script>
+      class Sensor {
+        #temperatura;
+        constructor(temperatura) {
+          this.#temperatura = temperatura;
+        }
 
-  <script>
-    class Sensor {
-      #temperatura
-      constructor(temperatura) {
-        this.#temperatura = temperatura;
-      }
+        get obtenerTemperatura() {
+          return `La temperatura actual es de ${this.#temperatura}`;
+        }
 
-      get obtenerTemperatura() {
-        return `La temperatura actual es de ${this.#temperatura}`
-      }
-
-      set cambiarTemperatura(nuevaTemperatura) {
-        if (nuevaTemperatura >= -50 && nuevaTemperatura <= 150) {
-          this.#temperatura = nuevaTemperatura;
-          console.log(`✅ La temperatura ha cambiado, ahora la temperatura es de ${this.#temperatura}`);
-        } else {
-          console.log(`❌ Es obvio que esa temperatura seria mortal`);
+        set cambiarTemperatura(nuevaTemperatura) {
+          if (nuevaTemperatura >= -50 && nuevaTemperatura <= 150) {
+            this.#temperatura = nuevaTemperatura;
+            console.log(
+              `✅ La temperatura ha cambiado, ahora la temperatura es de ${
+                this.#temperatura
+              }`
+            );
+          } else {
+            console.log(`❌ Es obvio que esa temperatura seria mortal`);
+          }
         }
       }
-    }
 
-    const temperaturaActual = new Sensor(100);
-    temperaturaActual.cambiarTemperatura = 120;
-    temperaturaActual.cambiarTemperatura = 200;
-  </script>
-</body>
-
+      const temperaturaActual = new Sensor(100);
+      temperaturaActual.cambiarTemperatura = 120;
+      temperaturaActual.cambiarTemperatura = 200;
+    </script>
+  </body>
 </html>

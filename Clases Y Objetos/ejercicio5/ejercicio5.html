@@ -1,56 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 5</title>
-</head>
+  <body>
+    <h1>ver en consola</h1>
+    <p>Ejercicio 5: Gestión de Usuarios 🧑‍💻</p>
+    <p>
+      📌 Objetivo: Practicar la creación de clases, métodos y modificación de
+      propiedades.
+    </p>
+    <p>Requisitos:</p>
+    <p>1️⃣ Crea una clase Usuario con las propiedades nombre, edad y correo.</p>
+    <p>
+      2️⃣ Agrega un método presentacion() que imprima una presentación del
+      usuario.
+    </p>
+    <p>
+      3️⃣ Agrega un método actualizarCorreo(nuevoCorreo) que cambie su correo.
+    </p>
+    <p>
+      4️⃣ Crea dos instancias de Usuario, usa ambos métodos e imprime los
+      resultados en la consola.
+    </p>
 
-<body>
-  <h1>ver en consola</h1>
-  <p>Ejercicio 5: Gestión de Usuarios 🧑‍💻</p>
-  <p>📌 Objetivo: Practicar la creación de clases, métodos y modificación de propiedades.</p>
-  <p>Requisitos:</p>
-  <p>1️⃣ Crea una clase Usuario con las propiedades nombre, edad y correo.</p>
-  <p>2️⃣ Agrega un método presentacion() que imprima una presentación del usuario.</p>
-  <p>3️⃣ Agrega un método actualizarCorreo(nuevoCorreo) que cambie su correo.</p>
-  <p>4️⃣ Crea dos instancias de Usuario, usa ambos métodos e imprime los resultados en la consola.</p>
+    <script>
+      class Usuario {
+        constructor(nombre, edad, correo) {
+          this.nombre = nombre;
+          this.edad = edad;
+          this.correo = correo;
+        }
+        presentacion() {
+          return `👤 Nombre ${this.nombre} Edad ${this.edad} Correo ${this.correo}`;
+        }
 
-  <script>
-    class Usuario {
-      constructor(nombre, edad, correo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.correo = correo;
+        cambiarEdad(newEdad) {
+          this.edad = newEdad;
+          console.log(
+            `🔄 La edad del usuario ${this.nombre} ha cambiado, ahora tiene Edad: ${newEdad}`
+          );
+        }
+
+        cambiarCorreo(newCorreo) {
+          this.correo = newCorreo;
+          console.log(
+            `El correo 📧 del usuario ${this.nombre} a cambiado, ahora es: ${newCorreo}`
+          );
+        }
       }
-      presentacion() {
-        return `👤 Nombre ${this.nombre} Edad ${this.edad} Correo ${this.correo}`
-      }
 
-      cambiarEdad(newEdad) {
-        this.edad = newEdad
-        console.log(`🔄 La edad del usuario ${this.nombre} ha cambiado, ahora tiene Edad: ${newEdad}`)
-      }
+      const usuario1 = new Usuario("juan", 18, "juanvahos@gmail.com");
+      console.log(usuario1.presentacion());
 
-      cambiarCorreo(newCorreo) {
-        this.correo = newCorreo
-        console.log(`El correo 📧 del usuario ${this.nombre} a cambiado, ahora es: ${newCorreo}`)
-      }
-    };
+      const usuario2 = new Usuario("any", 16, "any@gmail.com");
+      console.log(usuario2.presentacion());
 
-    const usuario1 = new Usuario('juan', 18, 'juanvahos@gmail.com');
-    console.log(usuario1.presentacion());
+      usuario2.cambiarEdad(17);
+      console.log(usuario2.presentacion());
 
-    const usuario2 = new Usuario('any', 16, 'any@gmail.com');
-    console.log(usuario2.presentacion());
-
-    usuario2.cambiarEdad(17);
-    console.log(usuario2.presentacion());
-
-    usuario1.cambiarCorreo('juan@gmail.com');
-    console.log(usuario1.presentacion());
-  </script>
-</body>
-
+      usuario1.cambiarCorreo("juan@gmail.com");
+      console.log(usuario1.presentacion());
+    </script>
+  </body>
 </html>

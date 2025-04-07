@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 1</title>
-</head>
+  <body>
+    <h1>ver en consola</h1>
+    <p>📝 Desafío para Ti</p>
+    <p>1️⃣ Crea una clase Vehiculo con las propiedades marca y modelo.</p>
+    <p>
+      2️⃣ Crea una clase Coche que herede de Vehiculo y añada la propiedad
+      puertas.
+    </p>
+    <p>
+      3️⃣ Crea una clase Moto que herede de Vehiculo y añada la propiedad
+      cilindrada.
+    </p>
+    <p>4️⃣ Crea instancias de Coche y Moto, e imprime sus datos en consola.</p>
 
-<body>
-  <h1>ver en consola</h1>
-  <p>📝 Desafío para Ti</p>
-  <p>1️⃣ Crea una clase Vehiculo con las propiedades marca y modelo.</p>
-  <p>2️⃣ Crea una clase Coche que herede de Vehiculo y añada la propiedad puertas.</p>
-  <p>3️⃣ Crea una clase Moto que herede de Vehiculo y añada la propiedad cilindrada.</p>
-  <p>4️⃣ Crea instancias de Coche y Moto, e imprime sus datos en consola.</p>
-
-  <script>
-    class Vehiculo {
-      constructor(marca, modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    <script>
+      class Vehiculo {
+        constructor(marca, modelo) {
+          this.marca = marca;
+          this.modelo = modelo;
+        }
       }
-    }
 
-    class Coche extends Vehiculo {
-      constructor(marca, modelo, puertas) {
-        super(marca, modelo);
-        this.puertas = puertas;
+      class Coche extends Vehiculo {
+        constructor(marca, modelo, puertas) {
+          super(marca, modelo);
+          this.puertas = puertas;
+        }
       }
-    }
 
-    class Moto extends Vehiculo {
-      constructor(marca, modelo, cilindrada) {
-        super(marca, modelo);
-        this.cilindrada = cilindrada;
+      class Moto extends Vehiculo {
+        constructor(marca, modelo, cilindrada) {
+          super(marca, modelo);
+          this.cilindrada = cilindrada;
+        }
       }
-    }
 
-    const coche1 = new Coche('Ferrari', '1995', 4);
-    const moto1 = new Moto('boxer', '2017', '100');
+      const coche1 = new Coche("Ferrari", "1995", 4);
+      const moto1 = new Moto("boxer", "2017", "100");
 
-    console.log(coche1)
-    console.log(moto1)
-  </script>
-</body>
-
+      console.log(coche1);
+      console.log(moto1);
+    </script>
+  </body>
 </html>

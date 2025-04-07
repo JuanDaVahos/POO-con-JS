@@ -1,63 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 4</title>
-</head>
+  <body>
+    <h1>Ver en consola</h1>
+    <p>4️⃣ Ejercicio: Cuenta Bancaria 💰</p>
+    <p>1️⃣ Crea una clase CuentaBancaria con titular y saldo.</p>
+    <p>2️⃣ Agrega un método depositar(monto) para sumar saldo.</p>
+    <p>
+      3️⃣ Crea una clase CuentaAhorro que herede de CuentaBancaria y agregue
+      interés.
+    </p>
+    <p>
+      4️⃣ Crea una clase CuentaCorriente que herede de CuentaBancaria y agregue
+      sobregiro.
+    </p>
+    <p>
+      5️⃣ Crea instancias y prueba los métodos de depósito y consulta de saldo.
+    </p>
 
-<body>
-  <h1>Ver en consola</h1>
-  <p>4️⃣ Ejercicio: Cuenta Bancaria 💰</p>
-  <p>1️⃣ Crea una clase CuentaBancaria con titular y saldo.</p>
-  <p>2️⃣ Agrega un método depositar(monto) para sumar saldo.</p>
-  <p>3️⃣ Crea una clase CuentaAhorro que herede de CuentaBancaria y agregue interés.</p>
-  <p>4️⃣ Crea una clase CuentaCorriente que herede de CuentaBancaria y agregue sobregiro.</p>
-  <p>5️⃣ Crea instancias y prueba los métodos de depósito y consulta de saldo.</p>
+    <script>
+      class CuentaBancaria {
+        constructor(titular, saldo) {
+          this.titular = titular;
+          this.saldo = saldo;
+        }
 
-  <script>
-    class CuentaBancaria {
-      constructor(titular, saldo) {
-        this.titular = titular;
-        this.saldo = saldo;
-      }
+        obtenerSaldo() {
+          return `Su saldo es: ${this.saldo}`;
+        }
 
-      obtenerSaldo() {
-        return `Su saldo es: ${this.saldo}`
-      }
-
-      depositar(monto) {
-        if (monto > 0) {
-          this.saldo = this.saldo + monto;
-          console.log(`Depositaste dinero: ${monto}`)
+        depositar(monto) {
+          if (monto > 0) {
+            this.saldo = this.saldo + monto;
+            console.log(`Depositaste dinero: ${monto}`);
+          }
         }
       }
-    }
 
-    class CuentaAhorro extends CuentaBancaria {
-      constructor(titular, saldo, interes) {
-        super(titular, saldo);
-        this.interes = interes;
+      class CuentaAhorro extends CuentaBancaria {
+        constructor(titular, saldo, interes) {
+          super(titular, saldo);
+          this.interes = interes;
+        }
       }
-    }
 
-    class CuentaCorriente extends CuentaBancaria {
-      constructor(titular, saldo, sobregiro) {
-        super(titular, saldo);
-        this.sobregiro = sobregiro;
+      class CuentaCorriente extends CuentaBancaria {
+        constructor(titular, saldo, sobregiro) {
+          super(titular, saldo);
+          this.sobregiro = sobregiro;
+        }
       }
-    }
 
-    const cuenta1 = new CuentaAhorro('Juan', 1000, 10);
-    console.log(cuenta1);
-    console.log(cuenta1.obtenerSaldo());
-    const cuenta2 = new CuentaCorriente('Juan', 1000, 10);
-    console.log(cuenta2);
-    cuenta2.depositar(100)
-    console.log(cuenta2.obtenerSaldo());
-
-  </script>
-</body>
-
+      const cuenta1 = new CuentaAhorro("Juan", 1000, 10);
+      console.log(cuenta1);
+      console.log(cuenta1.obtenerSaldo());
+      const cuenta2 = new CuentaCorriente("Juan", 1000, 10);
+      console.log(cuenta2);
+      cuenta2.depositar(100);
+      console.log(cuenta2.obtenerSaldo());
+    </script>
+  </body>
 </html>

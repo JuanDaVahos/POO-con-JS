@@ -1,65 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 4</title>
-</head>
+  <body>
+    <p>1️⃣ Ejercicio: Inventario de Productos 🛒</p>
+    <p>📌 Requisitos:</p>
+    <p>
+      Crea una clase Producto con las propiedades privadas #nombre, #precio y
+      #stock.
+    </p>
+    <p>Implementa un getter para obtener el precio del producto.</p>
+    <p>Implementa un setter para modificar el precio (solo si es mayor a 0).</p>
+    <p>
+      Implementa un setter para modificar el stock (solo si el valor es
+      positivo).
+    </p>
+    <p>
+      Crea una instancia de Producto, modifica el precio y el stock, y muestra
+      los resultados.
+    </p>
 
-<body>
-  <p> 1️⃣ Ejercicio: Inventario de Productos 🛒</p>
-  <p> 📌 Requisitos:</p>
-  <p> Crea una clase Producto con las propiedades privadas #nombre, #precio y #stock.
-  </p>
-  <p> Implementa un getter para obtener el precio del producto.
-  </p>
-  <p> Implementa un setter para modificar el precio (solo si es mayor a 0).
-  </p>
-  <p> Implementa un setter para modificar el stock (solo si el valor es positivo).
-  </p>
-  <p>Crea una instancia de Producto, modifica el precio y el stock, y muestra los resultados.</p>
+    <script>
+      class Producto {
+        #nombre;
+        #precio;
+        #stock;
+        constructor(nombre, precio, stock) {
+          this.#nombre = nombre;
+          this.#precio = precio;
+          this.#stock = stock;
+        }
 
-  <script>
-    class Producto {
-      #nombre;
-      #precio;
-      #stock;
-      constructor(nombre, precio, stock) {
-        this.#nombre = nombre;
-        this.#precio = precio;
-        this.#stock = stock;
-      }
+        get precioDeProducto() {
+          return this.#precio;
+        }
 
-      get precioDeProducto() {
-        return this.#precio;
-      }
+        set modificarPrecio(nuevoPrecio) {
+          if (nuevoPrecio > 0) {
+            this.#precio = nuevoPrecio;
+            console.log(
+              `El precio del producto ah cambiado, precio actual: ${
+                this.#precio
+              }`
+            );
+          } else {
+            console.log(`Error, el precio debe ser mayor a 0`);
+          }
+        }
 
-      set modificarPrecio(nuevoPrecio) {
-        if (nuevoPrecio > 0) {
-          this.#precio = nuevoPrecio;
-          console.log(`El precio del producto ah cambiado, precio actual: ${this.#precio}`);
-        } else {
-          console.log(`Error, el precio debe ser mayor a 0`);
+        set modificarStock(nuevoStock) {
+          if (nuevoStock > 0) {
+            this.#stock = nuevoStock;
+            console.log(
+              `El Stock de este producto cambio, el stock actual es de: ${
+                this.#stock
+              }`
+            );
+          } else {
+            console.log(`Error, el stock debe ser mayor a 0`);
+          }
         }
       }
 
-      set modificarStock(nuevoStock) {
-        if (nuevoStock > 0) {
-          this.#stock = nuevoStock;
-          console.log(`El Stock de este producto cambio, el stock actual es de: ${this.#stock}`);
-        } else {
-          console.log(`Error, el stock debe ser mayor a 0`);
-        }
-      }
-    }
-
-    const producto1 = new Producto(`peluche`, 10000, 6);
-    console.log(producto1.precioDeProducto);
-    producto1.modificarPrecio = 5000;
-    console.log(producto1.precioDeProducto);
-    producto1.modificarStock = 20;
-  </script>
-</body>
-
+      const producto1 = new Producto(`peluche`, 10000, 6);
+      console.log(producto1.precioDeProducto);
+      producto1.modificarPrecio = 5000;
+      console.log(producto1.precioDeProducto);
+      producto1.modificarStock = 20;
+    </script>
+  </body>
 </html>

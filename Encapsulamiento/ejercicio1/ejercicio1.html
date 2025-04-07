@@ -1,64 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 1</title>
-</head>
+  <body>
+    <h1>ver en consola</h1>
+    <p>1️⃣ Ejercicio: Cuenta Bancaria 🏦</p>
+    <p>
+      Crea una clase CuentaBancaria con las propiedades privadas #saldo y
+      #titular.
+    </p>
+    <p>Implementa un método para obtener el saldo.</p>
+    <p>
+      Implementa un método para depositar dinero (solo si el monto es positivo).
+    </p>
+    <p>
+      Implementa un método para retirar dinero (solo si hay saldo suficiente).
+    </p>
+    <p>
+      Crea una instancia de CuentaBancaria, deposita y retira dinero, y muestra
+      los resultados.
+    </p>
 
-<body>
-  <h1>ver en consola</h1>
-  <p>1️⃣ Ejercicio: Cuenta Bancaria 🏦</p>
-  <p>Crea una clase CuentaBancaria con las propiedades privadas #saldo y #titular.</p>
-  <p>Implementa un método para obtener el saldo.</p>
-  <p>Implementa un método para depositar dinero (solo si el monto es positivo).</p>
-  <p>Implementa un método para retirar dinero (solo si hay saldo suficiente).</p>
-  <p>Crea una instancia de CuentaBancaria, deposita y retira dinero, y muestra los resultados.</p>
+    <script>
+      class CuentaBancaria {
+        #saldo;
+        #titular;
 
+        constructor(saldo, titular) {
+          this.#saldo = saldo;
+          this.#titular = titular;
+        }
 
-  <script>
-    class CuentaBancaria {
-      #saldo;
-      #titular;
+        get obtenerSaldo() {
+          return `Su saldo es de: ${this.#saldo}`;
+        }
 
-      constructor(saldo, titular) {
-        this.#saldo = saldo;
-        this.#titular = titular;
-      }
+        set deposito(dinero_A_Depositar) {
+          if (dinero_A_Depositar > 0) {
+            this.#saldo = this.#saldo + dinero_A_Depositar;
+            console.log(
+              `✅ Su deposito fue hecho con exito, su sueldo actual es de: ${
+                this.#saldo
+              }`
+            );
+          } else {
+            console.log(`❌ Su deposito debe ser positivo`);
+          }
+        }
 
-      get obtenerSaldo() {
-        return `Su saldo es de: ${this.#saldo}`
-      }
-
-      set deposito(dinero_A_Depositar) {
-        if (dinero_A_Depositar > 0) {
-          this.#saldo = this.#saldo + dinero_A_Depositar
-          console.log(`✅ Su deposito fue hecho con exito, su sueldo actual es de: ${this.#saldo}`)
-        } else {
-          console.log(`❌ Su deposito debe ser positivo`);
+        set retirar(dinero_A_Retirar) {
+          if (dinero_A_Retirar > this.#saldo) {
+            console.log("❌ No tiene saldo suficiente para este retiro");
+          } else {
+            this.#saldo = this.#saldo - dinero_A_Retirar;
+            console.log(
+              `Usted retiró ${dinero_A_Retirar}, su saldo actual ${this.#saldo}`
+            );
+          }
         }
       }
 
-      set retirar(dinero_A_Retirar) {
-        if (dinero_A_Retirar > this.#saldo) {
-          console.log("❌ No tiene saldo suficiente para este retiro");
-        } else {
-          this.#saldo = this.#saldo - dinero_A_Retirar;
-          console.log(`Usted retiró ${dinero_A_Retirar}, su saldo actual ${this.#saldo}`)
-        }
-      }
-    }
-
-
-    const cuentaJuan = new CuentaBancaria(1000, 'Juan')
-    console.log(cuentaJuan.obtenerSaldo);
-    cuentaJuan.deposito = 1000;
-    console.log(cuentaJuan.obtenerSaldo);
-    cuentaJuan.retirar = 3000;
-    cuentaJuan.retirar = 1400
-
-  </script>
-</body>
-
+      const cuentaJuan = new CuentaBancaria(1000, "Juan");
+      console.log(cuentaJuan.obtenerSaldo);
+      cuentaJuan.deposito = 1000;
+      console.log(cuentaJuan.obtenerSaldo);
+      cuentaJuan.retirar = 3000;
+      cuentaJuan.retirar = 1400;
+    </script>
+  </body>
 </html>

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 2</title>
-</head>
+  <body>
+    <h1>Ver en consola</h1>
+    <p>2️⃣ Ejercicio: Dispositivos Electrónicos 💻📱</p>
+    <p>1️⃣ Crea una clase base Dispositivo con propiedades marca y modelo.</p>
+    <p>
+      2️⃣ Crea una clase Smartphone que herede de Dispositivo y agregue
+      sistemaOperativo.
+    </p>
+    <p>
+      3️⃣ Crea una clase Laptop que herede de Dispositivo y agregue procesador.
+    </p>
+    <p>4️⃣ Crea instancias de Smartphone y Laptop y muéstralas en consola.</p>
 
-<body>
-  <h1>Ver en consola</h1>
-  <p>2️⃣ Ejercicio: Dispositivos Electrónicos 💻📱
-  <p>1️⃣ Crea una clase base Dispositivo con propiedades marca y modelo.</p>
-  <p>2️⃣ Crea una clase Smartphone que herede de Dispositivo y agregue sistemaOperativo.</p>
-  <p>3️⃣ Crea una clase Laptop que herede de Dispositivo y agregue procesador.</p>
-  <p>4️⃣ Crea instancias de Smartphone y Laptop y muéstralas en consola.</p>
-
-  <script>
-    class Dispositivo {
-      constructor(marca, modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    <script>
+      class Dispositivo {
+        constructor(marca, modelo) {
+          this.marca = marca;
+          this.modelo = modelo;
+        }
       }
-    }
 
-    class Smartphone extends Dispositivo {
-      constructor(marca, modelo, sistemaOperativo) {
-        super(marca, modelo);
-        this.sistemaOperativo = sistemaOperativo;
+      class Smartphone extends Dispositivo {
+        constructor(marca, modelo, sistemaOperativo) {
+          super(marca, modelo);
+          this.sistemaOperativo = sistemaOperativo;
+        }
       }
-    }
 
-    class Laptop extends Dispositivo {
-      constructor(marca, modelo, procesador) {
-        super(marca, modelo);
-        this.procesador = procesador;
+      class Laptop extends Dispositivo {
+        constructor(marca, modelo, procesador) {
+          super(marca, modelo);
+          this.procesador = procesador;
+        }
       }
-    }
 
-    const smartphone1 = new Smartphone('Xioami', 'Note 13', 'Android');
-    const laptop1 = new Laptop('Hp', 'Omen 16', 'i5-13000k');
+      const smartphone1 = new Smartphone("Xioami", "Note 13", "Android");
+      const laptop1 = new Laptop("Hp", "Omen 16", "i5-13000k");
 
-    console.log(smartphone1);
-    console.log(laptop1);
-  </script>
-</body>
-
+      console.log(smartphone1);
+      console.log(laptop1);
+    </script>
+  </body>
 </html>

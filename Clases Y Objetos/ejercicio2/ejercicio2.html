@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 2</title>
-</head>
+  <body>
+    <h1>ver en consola</h1>
+    <p>Ejercicio 2: Producto</p>
+    <p>
+      Crea una clase llamada Producto que represente un producto de una tienda.
+      Debe incluir:
+    </p>
 
-<body>
-  <h1>ver en consola</h1>
-  <p>Ejercicio 2: Producto</p>
-  <p>Crea una clase llamada Producto que represente un producto de una tienda. Debe incluir:</p>
+    <p>Propiedades: nombre, precio, categoria</p>
+    <p>
+      Método: info() → Debe devolver un mensaje con la información del producto.
+    </p>
+    <p>Crea dos instancias de la clase y muestra su información.</p>
 
-  <p>Propiedades: nombre, precio, categoria</p>
-  <p>Método: info() → Debe devolver un mensaje con la información del producto.</p>
-  <p>Crea dos instancias de la clase y muestra su información.</p>
-
-  <script>
-    class Producto {
-      constructor(nombre, precio, categoria) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
+    <script>
+      class Producto {
+        constructor(nombre, precio, categoria) {
+          this.nombre = nombre;
+          this.precio = precio;
+          this.categoria = categoria;
+        }
+        info() {
+          return `Producto: ${this.nombre} Precio: ${this.precio} Categoria: ${this.categoria}`;
+        }
       }
-      info() {
-        return `Producto: ${this.nombre} Precio: ${this.precio} Categoria: ${this.categoria}`
-      }
-    };
 
-    const arroz = new producto('Arroz', 3000, 'Comida');
-    const panela = new producto('Panela', 5000, 'Comida');
+      const arroz = new producto("Arroz", 3000, "Comida");
+      const panela = new producto("Panela", 5000, "Comida");
 
-    console.log(arroz.info());
-    console.log(panela.info());
-  </script>
-</body>
-
+      console.log(arroz.info());
+      console.log(panela.info());
+    </script>
+  </body>
 </html>

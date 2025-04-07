@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 2</title>
-</head>
+  <body>
+    <h1>Ver en consola</h1>
+    <p>2️⃣Ejercicio: Usuario en una Plataforma 🧑‍💻</p>
+    <p>
+      Crea una clase Usuario con las propiedades privadas #nombre, #edad y
+      #contraseña.
+    </p>
+    <p>Implementa un método para obtener la edad.</p>
+    <p>
+      Implementa un método para modificar la contraseña (solo si es segura, es
+      decir, tiene más de 6 caracteres).
+    </p>
+    <p>
+      Crea una instancia de Usuario, intenta cambiar la contraseña y verifica
+      que la validación funcione.
+    </p>
 
-<body>
-  <h1>Ver en consola</h1>
-  <p>2️⃣Ejercicio: Usuario en una Plataforma 🧑‍💻</p>
-  <p>Crea una clase Usuario con las propiedades privadas #nombre, #edad y #contraseña.</p>
-  <p>Implementa un método para obtener la edad.</p>
-  <p>Implementa un método para modificar la contraseña (solo si es segura, es decir, tiene más de 6 caracteres).</p>
-  <p>Crea una instancia de Usuario, intenta cambiar la contraseña y verifica que la validación funcione.</p>
+    <script>
+      class Usuario {
+        #nombre;
+        #edad;
+        #contraseña;
 
-  <script>
-    class Usuario {
-      #nombre
-      #edad
-      #contraseña
+        constructor(nombre, edad, contraseña) {
+          this.#nombre = nombre;
+          this.#edad = edad;
+          this.#contraseña = contraseña;
+        }
 
-      constructor(nombre, edad, contraseña) {
-        this.#nombre = nombre;
-        this.#edad = edad;
-        this.#contraseña = contraseña
-      }
+        get obtenerEdad() {
+          return `Hola ${this.#nombre} tu edad es de ${this.#edad}`;
+        }
 
-      get obtenerEdad() {
-        return `Hola ${this.#nombre} tu edad es de ${this.#edad}`
-      }
-
-      set cambiarContraseña(nuevaContraseña) {
-        if (nuevaContraseña.length <= 6) {
-          this.#contraseña = nuevaContraseña;
-          console.log(`❌ ${this.#nombre} esta contraseña no es valida, debe tener más de 6 caracteres`)
-        } else {
-          console.log(`✅ ${this.#nombre} tu contraseña se cambio exitosamente 😊`)
+        set cambiarContraseña(nuevaContraseña) {
+          if (nuevaContraseña.length <= 6) {
+            this.#contraseña = nuevaContraseña;
+            console.log(
+              `❌ ${
+                this.#nombre
+              } esta contraseña no es valida, debe tener más de 6 caracteres`
+            );
+          } else {
+            console.log(
+              `✅ ${this.#nombre} tu contraseña se cambio exitosamente 😊`
+            );
+          }
         }
       }
-    }
 
-    const usuario1 = new Usuario(`Juan`, 18, 'juan123')
-    usuario1.cambiarContraseña = 'juan1234'
-    usuario1.cambiarContraseña = 'juan'
-  </script>
-</body>
-
+      const usuario1 = new Usuario(`Juan`, 18, "juan123");
+      usuario1.cambiarContraseña = "juan1234";
+      usuario1.cambiarContraseña = "juan";
+    </script>
+  </body>
 </html>
