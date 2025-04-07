@@ -4,15 +4,29 @@ function addProducts() {
   laptops.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = `
-    <h4 class="name">${product.name}</h4>
+    articleProduct.innerHTML = /*html*/ `
+      <h4 class="name">${product.name}</h4>
+      <img src="${product.image}" alt="${product.name}" />
+      <h3 class="price">${product.price}</h3>
+      <p class="description">
+        ${product.description}
+      </p>
+      <button id="openModal">Más Detalles</button>
+      <dialog closedby="any">
+        <form method="dialog">
+          <h4 class="name">${product.name}</h4>
           <img src="${product.image}" alt="${product.name}" />
           <h3 class="price">${product.price}</h3>
           <p class="description">
             ${product.description}
           </p>
-          <button>Más Detalles</button>
+          <p>Procesador: ${product.processor}</p>
+          <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
+          <button>Cerrar</button>
+        </form>
+      </dialog>
+      <button class="btnBuy">Agregar al carrito</button>
     `;
     sectionOfLaptops.appendChild(articleProduct);
   });
@@ -21,15 +35,29 @@ function addProducts() {
   pcs.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = `
-    <h4 class="name">${product.name}</h4>
+    articleProduct.innerHTML = /*html*/ `
+      <h4 class="name">${product.name}</h4>
+      <img src="${product.image}" alt="${product.name}" />
+      <h3 class="price">${product.price}</h3>
+      <p class="description">
+        ${product.description}
+      </p>
+      <button id="openModal">Más Detalles</button>
+      <dialog closedby="any">
+        <form method="dialog">
+          <h4 class="name">${product.name}</h4>
           <img src="${product.image}" alt="${product.name}" />
           <h3 class="price">${product.price}</h3>
           <p class="description">
             ${product.description}
           </p>
-          <button>Más Detalles</button>
+          <p>Procesador: ${product.processor}</p>
+          <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
+          <button>Cerrar</button>
+        </form>
+      </dialog>
+      <button class="btnBuy">Agregar al carrito</button>
     `;
     sectionOfpcs.appendChild(articleProduct);
   });
@@ -38,18 +66,51 @@ function addProducts() {
   mobiles.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = `
-    <h4 class="name">${product.name}</h4>
+    articleProduct.innerHTML = /*html*/ `
+      <h4 class="name">${product.name}</h4>
+      <img src="${product.image}" alt="${product.name}" />
+      <h3 class="price">${product.price}</h3>
+      <p class="description">
+        ${product.description}
+      </p>
+      <button id="openModal">Más Detalles</button>
+      <dialog closedby="any">
+        <form method="dialog">
+          <h4 class="name">${product.name}</h4>
           <img src="${product.image}" alt="${product.name}" />
           <h3 class="price">${product.price}</h3>
           <p class="description">
             ${product.description}
           </p>
-          <button>Más Detalles</button>
+          <p>Procesador: ${product.processor}</p>
+          <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
+          <button>Cerrar</button>
+        </form>
+      </dialog>
+      <button class="btnBuy">Agregar al carrito</button>
     `;
     sectionOfmobiles.appendChild(articleProduct);
   });
 }
 
+function openModalInfo() {
+  const buttonOpenModal = document.querySelectorAll("#openModal");
+
+  buttonOpenModal.forEach((btnOpenModal) => {
+    btnOpenModal.addEventListener("click", () => {
+      const modal = btnOpenModal.closest("article").querySelector("dialog");
+      if (modal) {
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+
+        modal.addEventListener("close", () => {
+          document.body.removeAttribute("style");
+        });
+      }
+    });
+  });
+}
+
 addProducts();
+openModalInfo();

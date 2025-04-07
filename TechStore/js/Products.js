@@ -66,8 +66,8 @@ const AsusROGZephyrusG14 = new Laptop(
   "./images/Asus ROG Zephyrus G14.webp",
   "$ 11.285.204 COP",
   "Laptop gamer ultra potente con Ryzen 9",
-  10,
-  "AMD Ryzen 9"
+  "AMD Ryzen 9",
+  10
 );
 
 const MacBookPro14 = new Laptop(
@@ -75,8 +75,8 @@ const MacBookPro14 = new Laptop(
   "./images/MacBookPro14.webp", //<- rute of image
   "$13,499,000 COP", //<- price
   "Diseño elegante y potente para profesionales", //<- description
-  7, //<- stock
-  "Apple M2 Pro" //<- aditional
+  "Apple M2 Pro", //<- aditional
+  7 //<- stock
 );
 
 // PCS
