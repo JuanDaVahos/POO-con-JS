@@ -4,7 +4,7 @@ function addProducts() {
   laptops.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = /*html*/ `
+    articleProduct.innerHTML = `
       <h4 class="name">${product.name}</h4>
       <img src="${product.image}" alt="${product.name}" />
       <h3 class="price">${product.price}</h3>
@@ -23,7 +23,7 @@ function addProducts() {
           <p>Procesador: ${product.processor}</p>
           <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
-          <button>Cerrar</button>
+          <button class="closeModal">Cerrar</button>
         </form>
       </dialog>
       <button class="btnBuy">Agregar al carrito</button>
@@ -35,7 +35,7 @@ function addProducts() {
   pcs.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = /*html*/ `
+    articleProduct.innerHTML = `
       <h4 class="name">${product.name}</h4>
       <img src="${product.image}" alt="${product.name}" />
       <h3 class="price">${product.price}</h3>
@@ -57,7 +57,7 @@ function addProducts() {
           <p>GPU: ${product.gpu}</p>
           <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
-          <button>Cerrar</button>
+          <button class="closeModal">Cerrar</button>
         </form>
       </dialog>
       <button class="btnBuy">Agregar al carrito</button>
@@ -69,7 +69,7 @@ function addProducts() {
   mobiles.forEach((product) => {
     const articleProduct = document.createElement("article");
     articleProduct.classList = "product";
-    articleProduct.innerHTML = /*html*/ `
+    articleProduct.innerHTML = `
       <h4 class="name">${product.name}</h4>
       <img src="${product.image}" alt="${product.name}" />
       <h3 class="price">${product.price}</h3>
@@ -91,7 +91,7 @@ function addProducts() {
           <p>Bateria: ${product.batery}</p>
           <p>Unidades = ${product.getStock()}</p>
           <button class="btnBuy">Agregar al carrito</button>
-          <button>Cerrar</button>
+          <button class="closeModal">Cerrar</button>
         </form>
       </dialog>
       <button class="btnBuy">Agregar al carrito</button>
@@ -115,6 +115,14 @@ function openModalInfo() {
         });
       }
     });
+  });
+}
+
+function addToCart() {
+  const btnBuy = document.querySelectorAll("btnBuy");
+
+  btnBuy.forEach((btnAddToCart) => {
+    btnAddToCart.addEventListener("click", () => {});
   });
 }
 

@@ -61,6 +61,7 @@ class SmartPhone extends Products {
 }
 
 // --> LAPTOPS
+
 const AsusROGZephyrusG14 = new Laptop(
   "Asus ROG Zephyrus G14",
   "./images/Asus ROG Zephyrus G14.webp",
@@ -106,6 +107,7 @@ const HPPavilionGaming = new PCs(
 );
 
 // SMART PHONES
+
 const iPhone15Pro = new SmartPhone(
   "iPhone 15 Pro", //<- Name
   "./images/iPhone15pro.webp", //<- rute of image

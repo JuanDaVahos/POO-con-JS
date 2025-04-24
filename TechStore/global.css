@@ -96,9 +96,31 @@ main .products {
   }
 }
 
+dialog {
+  inset: 0;
+  margin: auto;
+  padding: 15px;
+  width: 500px;
+  height: 500px;
+  &::backdrop {
+    background-color: #00000056;
+  }
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  gap: 20px;
+}
+
 dialog img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -114,24 +136,8 @@ dialog img {
   }
 }
 
-dialog[open] {
-  inset: 0;
-  margin: auto;
-  width: 100vh;
-  height: 80vh;
-  &::backdrop {
-    background-color: #00000056;
-  }
-}
-
-dialog form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 15px;
-  gap: 20px;
+.closeModal {
+  margin-bottom: 10px;
 }
 
 footer {
@@ -143,6 +149,7 @@ footer {
   color: #000;
   border-top: 1px solid #00000047;
 }
+
 footer p {
   text-shadow: 0 0 5px #000;
 }
